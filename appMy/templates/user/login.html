@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
+    
+<!-- kullanıcı sayfası içerik start-->
+<div class="container kullanici-giris">
+        <fieldset class="border p-2">
+            <legend class="float-none w-auto p-3">Kullanıcı Giriş</legend>
+            <div class="panel">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="giris">
+                            <h3>Üye Girişi</h3>
+                            <hr>
+                            
+                            {% if messages %}
+                                <ul>
+                                    {% for i in messages %}
+                                        <li class="uyari">{{ i }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                                
+                            <form method="POST" class="form">
+                                {% csrf_token %}
+                                <input type="text" name="username" placeholder="Kullanıcı Adı & E-mail"><br><br>
+                                <input type="password" name="password" placeholder="Parola"><br><br>
+                                <button type="submit" class="panel_buton">Giriş</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="reklam">
+                            <div class="reklam-text">
+                                <p>Bu alana reklam verebilirsiniz...</p>
+                            </div>
+                            <div class="reklam-img"><img src="{% static 'img/reklam.jpg' %}" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+</div>
+<!-- kullanıcı sayfası içerik end-->
+{% endblock body %} 

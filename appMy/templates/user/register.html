@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    
+<!-- kullanıcı sayfası içerik start-->
+<div class="container-fluid kayit-panel mt-5">
+        <fieldset class="border p-2">
+            <legend class="float-none w-auto p-3">Kayıt Paneli</legend>
+            <div class="panel">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="kayit">
+                            <h3>Kayıt Ol</h3>
+                            <hr>
+                            
+                            {% if messages %}
+                                <ul>
+                                    {% for i in messages %}
+                                        <li class="uyari_register">{{ i }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                                
+                            <form method="POST" class="form">
+                                {% csrf_token %}
+                                <input type="text" name="name" placeholder="Ad*"><br><br>
+                                <input type="text" name="surname" placeholder="Soyad*"><br><br>
+                                <input type="text" name="username" placeholder="Kullanıcı Adı Belirleyin*"><br><br>
+                                <input type="email" name="email" placeholder="E-Posta Adresi*"><br><br>
+                                <input type="password" name="password1" placeholder="Parola*"><br><br>
+                                <input type="password" name="password2" placeholder="Parola Tekrar*"><br><br>
+                                <input type="checkbox"> <span>Kampanyalardan haberdar et</span><br><br>
+                                <input type="checkbox"> <a href="#" class="kk"> Kullanıcı Koşullarını Kabul Ediyorum <span>(Zorunlu)</span> </a><br><br>
+                                <button type="submit" class="panel_buton">Kayıt Ol</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+</div>
+<!-- kullanıcı sayfası içerik end-->
+{% endblock body %} 

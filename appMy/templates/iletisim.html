@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
+<!-- iletişim content start -->
+<div class="container mt-5 middle">
+        <div class="row">
+            <div class="col-sm-6 iletisim_left">
+                <form class="contact_form">
+                    <h4>İletişim</h4>
+                    <input class="inpt" type="text" name="ad" placeholder="Ad-Soyad"><br><br>
+                    <input class="inpt" type="email" name="mail" placeholder="E-mail"><br><br>
+                    <input class="inpt" type="text" name="konu" placeholder="Konu"><br><br>
+                    <textarea placeholder="Mesajınız(140 Karakter)..." cols="30" rows="10" maxlength="140"></textarea><br>
+                    <input class="inpt" type="submit" name="gonder" value="Gönder">
+                </form>
+            </div>
+            <div class="col-sm-6 iletisim_right">
+                <div class="iletisim">
+                    <div class="iletisim_top mt-2">
+                        <h4>İletişim Bilgileri</h4>
+                        <h6>F-E.com</h6>
+                        <address><b>Adres:</b><span>Lorem ipsum dolor sit amet consecteturadipisicing elit. Voluptatum, numquam! İstanbul/Türkiye</span></address>
+                        <b>Tel:</b><a href="tel:+900000000000">+90 000 000 00 00</a><br>
+                        <b>E-Mail:</b><a href="mailto:fatiheksi.59@gmail.com">bilgi.bilgi@gmail.com</a>
+                    </div>
+                    <div class="iletisim_bot mt-5">
+                        <h4>Sosyal Medya Adresleri</h4>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- iletişim content end -->
+{% endblock body %} 
+  
+    

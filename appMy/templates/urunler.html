@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
+    
+<!-- ürünler-->
+<div class="container products">
+        <div class="row">
+            
+            {% for i in urunler %}
+                
+            <div class="col-lg-3 col-md-6">
+                <div class="kart_urunler">
+                    <img src="{{ i.urun.image.url }}" class="w-100" alt="">
+                    <div class="kart-text">
+                        <h6>{{ i.urun.title }}</h6>
+                        <p>{{ i.beden_kiyafet.first.fiyat }} ₺</p>
+                        <a href="{% url 'urunDetay' i.urun.slug %}" class="btn">Ürün İncele</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+                
+            
+        </div>
+</div>
+<!-- ürünler içerik end-->
+{% endblock body %}
+

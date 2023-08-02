@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
+<!-- homepage content start -->
+<div class="container-fluid">
+        <div class="row">
+            <!-- category accordion start -->
+            <div class="col-md-3 mt-5">
+                <h3 class="mb-3">KATEGORİLER</h3>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed accordion_title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Kadın
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ul>
+                          <li><a href="#">T-shirt</a></li>
+                          <li><a href="#">Kazak</a></li>
+                          <li><a href="#">Gömlek</a></li>
+                          <li><a href="#">Klasik</a></li>
+                          <li><a href="#">Spor</a></li>
+                          <li><a href="#">Etek</a></li>
+                          <li><a href="#">Pantolon</a></li>
+                          <li><a href="#">Ayakkabı</a></li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed accordion_title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Erkek
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ul>
+                          <li><a href="#">T-shirt</a></li>
+                          <li><a href="#">Kazak</a></li>
+                          <li><a href="#">Gömlek</a></li>
+                          <li><a href="#">Klasik</a></li>
+                          <li><a href="#">Spor</a></li>
+                          <li><a href="#">Pantolon</a></li>
+                          <li><a href="#">Ayakkabı</a></li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed accordion_title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Çocuk
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ul>
+                          <li><a href="#">T-shirt</a></li>
+                          <li><a href="#">Kazak</a></li>
+                          <li><a href="#">Gömlek</a></li>
+                          <li><a href="#">Pantolon</a></li>
+                          <li><a href="#">Ayakkabı</a></li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFourth">
+                      <button class="accordion-button collapsed accordion_title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourth" aria-expanded="false" aria-controls="flush-collapseFourth">
+                        Çanta
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFourth" class="accordion-collapse collapse" aria-labelledby="flush-headingFourth" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ul>
+                          <li><a href="#">Omuz Çantası</a></li>
+                          <li><a href="#">Spor Çantası</a></li>
+                          <li><a href="#">Sırt Çantası</a></li>
+                          <li><a href="#">El Çantası</a></li>
+                          <li><a href="#">Bebek Bakım Çantası</a></li>
+                          <li><a href="#">Plaj Çantası</a></li>
+                          <li><a href="#">Evrak Çantası</a></li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFifth">
+                      <button class="accordion-button collapsed accordion_title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFifth" aria-expanded="false" aria-controls="flush-collapseFifth">
+                        Ayakkabı
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFifth" class="accordion-collapse collapse" aria-labelledby="flush-headingFifth" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ul>
+                          <li><a href="#">Günlük Spor Ayakkabı</a></li>
+                          <li><a href="#">Bot & Çizme</a></li>
+                          <li><a href="#">Terlik</a></li>
+                          <li><a href="#">Erkek Klasik</a></li>
+                          <li><a href="#">Kadın Klasik</a></li>
+                          <li><a href="#">Halı Saha Ayakkabısı</a></li>
+                          <li><a href="#">Yürüyüş & Koşu</a></li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSixth">
+                      <button class="accordion-button collapsed accordion_title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSixth" aria-expanded="false" aria-controls="flush-collapseSixth">
+                        Parfüm
+                      </button>
+                    </h2>
+                    <div id="flush-collapseSixth" class="accordion-collapse collapse" aria-labelledby="flush-headingSixth" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ul>
+                          <li><a href="#">Unisex Parfüm</a> </li>
+                          <li><a href="#">Kadın Parfüm</a> </li>
+                          <li><a href="#">Kadın Parfüm Seti</a> </li>
+                          <li><a href="#">Erkek Parfüm</a> </li>
+                          <li><a href="#">Erkek Parfüm Seti</a> </li>
+                          <li><a href="#">Deodorant</a> </li>
+                          <li><a href="#">Cilt Bakım Ürünleri</a> </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- category accordion end -->
+            <!-- caousel-text-->
+            <div class="col-md-9">
+                <div class="container homepage_icerik mt-5">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="tanitim">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim ipsam minima, inventore nihil illum quod, quibusdam          aut ex  incidunt ipsum laboriosam dolores quos, maiores animi in fugiat iste quas dicta saepe recusandae totam error            consectetur eum.    Non amet, ab, aspernatur veritatis aliquam unde sapiente minus dolore aliquid nulla eius? Lorem ipsum       dolor sit amet   consectetur, adipisicing elit. Ratione in consectetur dolores exercitationem, iste incidunt eum quod. Non       error architecto    asperiores, quos accusamus laboriosam vero fugit? Nostrum molestiae iusto nesciunt, numquam dicta     voluptate quisquam   perferendis eaque architecto praesentium vero quos aspernatur amet doloremque. At consequatur dolore,       veniam molestias quas   similique.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- carousel start-->
+                        <div class="col-sm-6 p-0">
+                          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active" data-bs-interval="3000">
+                                <img src="{% static 'img/girl1.jpg' %}" class="d-block w-100" alt="image">
+                              </div>
+                              <div class="carousel-item" data-bs-interval="3000">
+                                <img src="{% static 'img/girl2.jpg' %}" class="d-block w-100" alt="image">
+                              </div>
+                              <div class="carousel-item" data-bs-interval="3000">
+                                <img src="{% static 'img/girl3.jpg' %}" class="d-block w-100" alt="image">
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- carousel end -->
+<hr>
+<!-- hompage-bottom start-->
+<div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- brands-->
+                <h3 class="mt-5 mb-5">MARKALAR</h3>
+                <div class="brands">
+                  <div class="brands_menu ms-3 p-2">
+                    <h6 class="brands-title"><i class="bi bi-stars"></i> Guess</h6><hr>
+                    <div class="brands-list">
+                        <ul>
+                            <li><a href="">Kadın Giyim</a></li>
+                            <li><a href="">Erkek Giyim</a> </li>
+                            <li><a href="">Çanta</a> </li>
+                            <li><a href="">Parfüm</a> </li>
+                            <li><a href="">Ayakkabı</a> </li>
+                        </ul>
+                    </div><hr>
+                    <h6 class="brands-title"><i class="bi bi-stars"></i> Dior </h6><hr>
+                    <div class="brands-list">
+                        <ul>
+                          <li><a href="">Kadın Giyim</a></li>
+                          <li><a href="">Erkek Giyim</a> </li>
+                          <li><a href="">Çanta</a> </li>
+                          <li><a href="">Parfüm</a> </li>
+                          <li><a href="">Ayakkabı</a> </li>
+                        </ul>
+                    </div><hr>
+                    <h6 class="brands-title"><i class="bi bi-stars"></i> Chanel</h6><hr>
+                    <div class="brands-list">
+                        <ul>
+                          <li><a href="">Kadın Giyim</a></li>
+                          <li><a href="">Erkek Giyim</a> </li>
+                          <li><a href="">Çanta</a> </li>
+                          <li><a href="">Parfüm</a> </li>
+                          <li><a href="">Ayakkabı</a> </li>
+                        </ul>
+                    </div><hr>
+                  </div>
+                </div>
+            </div>
+              <!-- brands end -->
+            
+            
+            <!-- product cards start -->
+            <div class="col-md-9 text-center mt-5">
+                <h3 class="mb-5">ÖNE ÇIKANLAR</h3>
+                <div class="container">
+                    <div class="row">
+                        
+                        {% for i in urunler %}
+                          
+                        <div class="col-lg-3 col-md-6">
+                          <div class="kart_urunler">
+                              <a href="{% url 'urunDetay' i.slug %}"><img src="{{ i.image.url }}" class="w-100" alt=""></a>
+                              <div class="kart-text">
+                                  <h6>{{ i.title }}</h6>
+                              </div>
+                          </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- cards end-->
+{% endblock body %}   
+    
+    
+    

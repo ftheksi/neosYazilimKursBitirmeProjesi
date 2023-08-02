@@ -1,0 +1,374 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block css %}
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slick.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slick-theme.css' %}">
+    <style>
+        .colorradio + label{
+            border: 4px solid black !important;
+        }
+        .sizeradio,.colorradio{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+        }
+        .sizeradio:checked + label{
+            background: #e92525 !important;
+            box-shadow: inset 0px 0px 8px 4px #00000060;
+        }
+        
+        
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            padding: 20px;
+            width: 100%;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border-radius: 6px;
+            box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1)
+        }
+
+        .comment-box{
+            
+            padding:5px;
+        }
+
+
+
+        .comment-area textarea{
+        resize: none; 
+        }
+
+        .yorum{
+            color: black;
+        }
+        .yorum-user{
+            color: rgb(241, 86, 9);
+        }
+        .form-control:focus {
+            color: #495057;
+            background-color: #fff;
+            border-color: #ffffff;
+            outline: 0;
+            box-shadow: 0 0 0 1px rgb(255, 136, 0) !important;
+        }
+
+        .send {
+            color: #fff;
+            background-color: #ff9d00;
+            border-color: #ff9d00;
+        }
+
+        .send:hover {
+            color: #fff;
+            background-color: #ff9d00;
+            border-color: #ff9d00;
+        }
+
+
+        .rating {
+        display: flex;
+                margin-top: -10px;
+            flex-direction: row-reverse;
+            margin-left: -4px;
+                float: left;
+        }
+
+        .rating>input {
+            display: none
+        }
+        .title-comm{
+            color: bisque;
+        }
+
+        .star,.star-full{
+            position: relative;
+            width: 25px;
+            font-size: 30px !important;
+            color: #ff9d00;
+            cursor: pointer;
+        }
+        .star-full::before {
+            content: "\2605";
+            position: absolute;
+            opacity: 1
+        }
+        
+        .rating>label {
+            position: relative;
+            width: 30px;
+            font-size: 35px !important;
+            color: #ff9d00;
+            cursor: pointer;
+        }
+
+        .rating>label::before {
+            content: "\2605";
+            position: absolute;
+            opacity: 0
+        }
+
+        .rating>label:hover:before,
+        .rating>label:hover~label:before {
+            opacity: 1 !important
+        }
+
+        .rating>input:checked~label:before {
+            opacity: 1
+        }
+
+        .rating:hover>input:checked~label:before {
+            opacity: 0.4
+        }
+    </style>
+{% endblock css %}
+    
+
+
+{% block body %}
+
+
+    <!-- Open Content -->
+    <section class="bg-light">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-lg-5 mt-5">
+                    <div class="card mb-3">
+                        <img class="card-img img-fluid" src="{{ urun.urun.image.url }}" alt="Card image cap" id="product-detail" style="height: 400px; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- col end -->
+                <div class="col-lg-7 mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="h2">{{ urun.urun.title }}</h1>
+                            <p class="h3 py-2 text-success fw-bold" id="productprice">{{ urun.beden_kiyafet.first.fiyat }} ₺</p>
+                            <p class="py-2">
+                                <span class="list-inline-item text-dark">Puan: {{ urun.urun.puan }} | {{ comments|length }} Yorum</span>
+                            </p>
+                            
+                            <h6>Açıklama:</h6>
+                            <p>{{ urun.urun.text }}</p>
+
+                            <form name="formdetay" method="POST" id="formdetay">
+                                {% csrf_token %}
+                                <input type="hidden" name="product-title" value="Activewear">
+                                <div class="row">
+                                    <div class="col-auto w-100">
+                                        <ul class="list-inline pb-3">
+                                            <li class="list-inline-item">Renk : {{ urun.beden_kiyafet.first.renk }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-auto">
+                                        <ul class="list-inline pb-3">
+                                            <li class="list-inline-item">Beden :</li>
+                                            <li class="list-inline-item">
+                                                <input type="radio" name="size" onclick="productSize(this.value)" value="S" required id="sizeS" class="sizeradio">
+                                                <label for="sizeS" class="btn btn-success">S</label>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <input type="radio" name="size" onclick="productSize(this.value)" value="M" required id="sizeM" class="sizeradio">
+                                                <label for="sizeM" class="btn btn-success">M</label>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <input type="radio" name="size" onclick="productSize(this.value)" value="L" required id="sizeL" class="sizeradio">
+                                                <label for="sizeL" class="btn btn-success">L</label>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <input type="radio" name="size" onclick="productSize(this.value)" value="XL" required id="sizeXL" class="sizeradio">
+                                                <label for="sizeXL" class="btn btn-success">XL</label>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <input type="radio" name="size" onclick="productSize(this.value)" value="XXL" required id="sizeXXL" class="sizeradio">
+                                                <label for="sizeXXL" class="btn btn-success">XXL</label>
+                                            </li>                                           
+                                        </ul>
+                                    </div>
+                                    <div class="col-auto">
+                                        <ul class="list-inline pb-3">
+                                            <li class="list-inline-item text-right">
+                                                Adet
+                                                <input type="hidden" name="count" id="product-quanity" value="1">
+                                            </li>
+                                            <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
+                                            <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
+                                            <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
+                                        </ul>
+                                    </div>
+                                </div>                                
+                                {% if request.user.is_authenticated %}
+                                <div class="row pb-3">
+                                    <div class="col d-grid">
+                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Sepete Ekle</button>
+                                    </div>
+                                    <div class="col d-grid">
+                                        
+                                    </div>
+                                </div>
+                                {% else %}
+                                <div class="row pb-3">
+                                    <div class="col d-grid">
+                                        <a class="nav-link text-light btn btn-primary" href="{% url 'loginUser' %}">Giriş Yap</a>
+                                    </div>
+                                    <div class="col d-grid">
+                                        <a class="nav-link text-light btn btn-primary" href="{% url 'registerUser' %}">Kayıt Ol</a>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                    
+                            </form>
+                            <script>
+                                var productprice = document.getElementById("productprice");
+                                var productsize;
+                                
+
+                                productPrice = ()=>{
+                                    for (i = 0; i < listprice.length; i++) {
+                                        if (listsize[i] === productsize) {
+                                            productprice.innerText = "₺"+listprice[i] 
+                                        }
+                                    } 
+                                }
+
+                                
+                                
+                                if (productsize != undefined){
+                                }
+                                
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Close Content -->
+
+    <div class="container">
+        <div class="row">
+            <h4 class="title-comm">Yorumlar</h4>
+            <div class="col-12">
+                <div class="card">                    
+                    {% for x in comments %}
+                    <hr class="yorum">
+                    <div class="row">
+                        <div class="col-2 d-flex flex-column align-items-center">
+                            <h5 class="pt-3 yorum-user">{{ x.user }}</h5>
+                        </div>
+                        <div class="col-10">
+                            <div class="comment-box ml-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="rating d-flex">                                        
+                                        {% for i in "54321"|make_list %}
+                                            {% if i|add:"0" > x.star %} 
+                                            <div class="star">☆</div>
+                                            {% else %} 
+                                            <div class="star-full">☆</div>
+                                            {% endif %} 
+                                        {% endfor %}                                                                               
+                                    </div>
+                                    <span>{{ x.date_now }}</span>
+                                </div>
+                                <hr>
+                                <div class="comment-area ">
+                                    <p>{{ x.text }}</p>                                   
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}                                   
+                </div>
+            </div>
+            {% if request.user.is_authenticated %}
+            <h4 class="title-comm mt-3">Bu Ürünü Değerlendir</h4>
+            <div class="col-12">
+                <div class="card">                   
+                    <div class="row">
+                        <div class="col-2 d-flex flex-column align-items-center">
+                            <h5 class="pt-5">{{ request.user }}</h5>
+                        </div>
+                        <div class="col-10">
+                            <form method="POST" class="comment-box ml-2">
+                                {% csrf_token %}
+                                <div class="rating">
+                                    <input type="radio" name="star" value="5" id="5"><label for="5">☆</label>
+                                    <input type="radio" name="star" value="4" id="4"><label for="4">☆</label>
+                                    <input type="radio" name="star" value="3" id="3"><label for="3">☆</label>
+                                    <input type="radio" name="star" value="2" id="2"><label for="2">☆</label>
+                                    <input type="radio" name="star" value="1" id="1"><label for="1">☆</label>
+                                </div>
+                                <div class="comment-area">
+                                    <textarea class="form-control" name="text" placeholder="Yorum yap" rows="4"></textarea>
+                                </div>
+                                <div class="comment-btns mt-2">
+                                    <div class="row">                                       
+                                        <div class="col-6">
+                                            <div class="pull-right">
+                                                <button type="submit" name="submit" value="comment" class="btn btn-success send btn-sm">Yorumu Paylaş <i
+                                                        class="fa fa-long-arrow-right ml-1"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    
+
+    
+    {% endblock body %}
+    
+    {% block js %}
+    <!-- Start Slider Script -->
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script>
+        $('#carousel-related-product').slick({
+            infinite: true,
+            arrows: false,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            dots: true,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3
+                    }
+                }
+            ]
+        });
+    </script>
+    <!-- End Slider Script -->
+    {% endblock js %}

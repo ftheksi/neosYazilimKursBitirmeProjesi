@@ -1,0 +1,623 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Dancing+Script&family=Kavoon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(186, 73, 12); 
+}
+/* header */
+.header-top{
+    background-color: rgb(8, 47, 47);
+}
+.contact i{
+    color: orange;
+    font-size: 12px;
+}
+.contact a{
+    color: bisque;
+    font-size: 12px;
+}
+
+.social i{
+    color: orange;
+}
+.nav-icon i{
+    color: orange;
+    margin: auto;
+    margin-right: 7px;
+}
+.login{
+    color: orange;
+    background-color: rgb(8, 47, 47);
+}
+.login:hover{
+    background-color: orange;
+}
+.dropdown-menu li a{
+    font-size: 12px;
+}
+
+/* menu & logo */
+.myheader{
+    background-color: #431311ab;
+}
+
+.menu ul li a{
+    font-size: 18px;
+    color: bisque;
+}
+.menu ul li a:hover{
+    color: orange;
+}
+.profile a{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: orange;
+    text-transform: capitalize;
+}
+
+
+
+/* homepage middle*/
+.homepage_icerik{
+    background-color: whitesmoke;
+    border-radius: 15px;
+}
+.tanitim{
+    margin: auto;
+    margin-top: 120px !important;
+    font-size: 19px;
+    font-family: 'Anton', sans-serif;
+}
+.carousel-item img{
+    width: 100%;
+    border-radius: 0 20px 20px 0;
+}
+/* accordion */
+
+.accordion_title{
+    color: bisque !important;
+    background-color: #431311 !important;
+}
+.accordion-body{
+    background-color: #b24e18ea;
+}
+.accordion-body ul li{
+    list-style-type: circle;
+    color: bisque;
+}
+.accordion-body ul li a{
+    text-decoration: none;
+    color: bisque;
+}
+.accordion-body ul li a:hover{
+    color: orange;
+}
+h3{
+    font-family: 'Stick No Bills', sans-serif;
+    color: bisque;
+}
+/* brands */
+.brands{
+    margin: auto;
+    margin-top: 60px;
+    background-color: #431311;
+    border-radius: 15px;
+}
+hr{
+    color: bisque;
+}
+.brands-title{
+    color: bisque;
+    font-size: 25px;
+    font-family: 'Stick No Bills', sans-serif;
+}
+.brands-list{
+    color: bisque;
+}
+.brands-list ul li a{
+    text-decoration: none;
+    color: bisque;
+}
+.brands-list ul li a:hover{
+    color: orange;
+}
+
+/* cards start */
+
+.kartlar{
+    background-color: rgb(186, 73, 12);
+    border: none; 
+}
+.kartlar_icerik{
+    background-color: #431311ab;
+    color: bisque;
+    padding:10px 0;
+    border-radius: 0 0 10px 10px;
+}
+.kartlar_icerik a{
+    background-color: #d02013;
+    color: bisque;
+    font-size: 10px;
+    border: none;
+}
+.kartlar_icerik a:hover{
+    background-color: #8fe614;
+    color: #431311;
+}
+
+/* ÜRÜNLER */
+.products{
+    margin: auto;
+    margin-top: 10px;
+    background-color: #431311ab;
+    border-radius: 10px;
+    padding: 10px;
+}
+.kart_urunler{
+    margin-bottom: 10px;
+}
+.kart_urunler img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.kart-text{
+    background-color: #431311ab;
+    color: bisque;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+}
+.kart-text a{
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: rgb(65, 24, 24);
+    color: bisque;
+    border: none;
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 0 0 10px 10px;
+}
+.kart-text a:hover{
+    background-color: rgb(61, 133, 27);
+    color: bisque;
+}
+
+/* cards end */
+input[type="radio"]{
+    position: fixed;
+    opacity: 0;
+    visibility:hidden;
+}
+/* sepet */
+.sepet{
+    font-family: 'Abril Fatface', cursive;
+}
+.sepet_menu{
+    color: bisque;
+    font-size: 18px;
+}
+.sepet_tanim h6{
+    margin: auto;
+    margin-top: 20px;
+}
+.sepet_tanim h6 a{
+    text-decoration: none;
+    color: bisque;
+}
+.sepet_fiyat{
+    color: bisque;
+}
+.sepet_fiyat p{
+    margin: auto;
+    margin-top: 20px;
+}
+.sepet_adet_buton{
+    margin: auto;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.sepet_toplam p{
+    margin: auto;
+    margin-top: 20px;
+}
+.toplam_fiyat{
+    color: bisque;
+}
+.sepet_adet_input{
+    color: bisque;
+    background-color: rgb(140, 37, 37);
+    border: none;
+    border-radius: 10px;
+}
+.sepet_adet .sepet_adet_buton input{
+    text-align: center;
+}
+.sepet_adet_ust{
+    color: bisque;
+    text-decoration: none;
+}
+.sepet_adet_alt{
+    color: bisque;
+    text-decoration: none;
+}
+.sepet_adet_sil{
+    color: bisque;
+}
+.uyari{
+    color: bisque;
+}
+.kullanici_ayar li label{
+    color: bisque;
+}
+.kullanici_ayar li{
+    list-style-type: none;
+}
+.adres_bilgi li{
+    list-style-type: none;
+    color: bisque;
+}
+.ulke label{
+    font-size:18px;
+}
+.sehir label{
+    font-size:18px;
+}
+.son_bilgi{
+    text-align: center;
+}
+.son_bilgi ul li{
+    list-style-type: none;
+    color: bisque;
+}
+.son_bilgi ul li span{
+    font-size: 20px;
+}
+.odeme{
+    color: bisque;
+    text-decoration: none;
+    float: right;
+}
+.odeme:hover{
+    color: bisque;
+    font-size: 20px;
+}
+
+/* kullanıcı sayfası içerik */
+.uyari{
+    color: #080d55;
+}
+.uyari_register{
+    color: orange;
+}
+.panel{
+    padding: 20px 21px 20px 100px;
+}
+.kayit-panel{
+    padding: 10px;
+    background-image: url(../img/register-bg.jpg);
+    background-size: cover;
+}
+.kullanici-giris{
+    margin: auto;
+    margin-top: 90px;
+    
+}
+hr{
+    color: bisque;
+}
+legend{
+    color: bisque;
+}
+.form{
+    padding: 20px;
+}
+.form input{
+    border-radius: 5px;
+    border: none;
+}
+.giris h3{
+    color: bisque;
+}
+.kayit h3{
+    color: bisque;
+}
+form span{
+    color: bisque;
+    font-style: italic;
+}
+.kk{
+    color: bisque;
+    text-decoration: none;
+    font-style: italic;
+}
+.kk span{
+    font-weight: bold;
+}
+.kk:hover{
+    color: red;
+    background-color: black;
+    border-radius: 8px;
+    padding: 2px;
+}
+.panel_buton{
+    color: bisque;
+    background-color: black;
+    border-radius: 12%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+button:hover{
+    background-color: bisque;
+    color: black;
+}
+.reklam-text p{
+    color: bisque;
+}
+.reklam img{
+    width: 80%;
+    border-radius: 5px;
+}
+
+/* iletisim middle */
+.contact_form{
+    font-size: 18px;
+}
+.contact_form .inpt{
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+}
+.contact_form textarea{
+    width: 50%;
+    border-radius: 10px;
+}
+.iletisim{
+    margin: auto;
+    margin-top: 130px;
+    font-size: 20px;
+    font-family: 'Vollkorn', serif;
+}
+.iletisim_top a{
+    color: bisque;
+    text-decoration: none;
+}
+address span{
+    color: bisque;
+}
+.iletisim_bot a i{
+    color: bisque;
+    font-size: 30px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+/* footer */
+footer{
+    background-color: #431311ab;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 0px;
+}
+.ftr-img img{
+    width: 50%;
+    border-radius: 10px;
+}
+.ftr-logo img{
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+}
+.ftr-harita{
+    text-align: center;
+}
+.ftr-harita p{
+    color: bisque;
+    font-size: 20px;
+}
+.ftr-harita img{
+    width: 100%;
+    margin: auto;
+}
+.ftr-text{
+    margin: auto;
+    margin-top: 20px;
+}
+.ftr-text a{
+    text-decoration: none;
+    display: block;
+    color: bisque;
+    font-size: 12px;
+}
+.ftr-text a:hover{
+    color: orange;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1530px) {
+    .tanitim{
+      font-size: 15px;
+    }
+  }
+@media screen and (max-width: 1400px) {
+    .tanitim{
+      font-size: 12px;
+    }
+  }
+@media screen and (max-width: 1150px) {
+    .tanitim{
+      margin-top: 70px !important;
+    }
+  }
+@media screen and (max-width: 1070px) {
+    .col-md-9{
+      margin-top: 20px;
+    }
+  }
+@media screen and (max-width: 1010px) {
+    .col-md-9{
+      margin-top: 30px;
+    }
+  }
+@media screen and (max-width: 1000px) {
+    .tanitim{
+      margin-top: 60px;
+    }
+  }
+@media screen and (max-width: 956px) {
+    .tanitim{
+      font-size: 10px;
+    }
+    .col-md-9{
+        margin-top: 35px;
+    }
+  }
+@media screen and (max-width: 820px) {
+    .tanitim{
+      margin-top: 50px !important;
+    }
+  }
+@media screen and (max-width: 800px) {
+    .tanitim{
+      margin-top: 40px;
+    }
+  }
+@media screen and (max-width: 771px) {
+    .sepet_tanim h6 a{
+        font-size: 12px;
+    }
+    .sepet_tanim p{
+        font-size: 12px;
+    }
+    .sepet_adet_ust{
+        font-size: 12px;
+    }
+    .sepet_adet_alt{
+        font-size: 12px;
+    }
+    .sepet_adet_buton{
+        font-size: 13px;
+    }
+    .toplam_fiyat{
+        font-size: 12px;
+    }
+    .sepet_fiyat p{
+        font-size: 12px;
+    }
+  }
+@media screen and (max-width: 768px) {
+    .panel {
+      padding: 0;
+    }
+  }
+@media screen and (max-width: 767px) {
+    .tanitim{
+      margin-top: 25px;
+    }
+  }
+@media screen and (max-width: 750px) {
+    .pages li a {
+      font-size: 12px;
+    }
+  }
+@media screen and (max-width: 575px) {
+    .container-fluid, .middle{
+        text-align: center;
+    }
+  }
+@media screen and (max-width: 531px) {
+    .sepet_tanim h6 a{
+        font-size: 10px;
+    }
+    .sepet_tanim p{
+        font-size: 10px;
+    }
+    .sepet_adet_ust{
+        font-size: 10px;
+    }
+    .sepet_adet_alt{
+        font-size: 10px;
+    }
+    .sepet_adet_buton{
+        font-size: 11px;
+    }
+    .toplam_fiyat{
+        font-size: 10px;
+    }
+    .sepet_fiyat p{
+        font-size: 10px;
+    }
+  }
+@media screen and (max-width: 501px) {
+    .sepet_tanim h6 a{
+        font-size: 7px;
+    }
+    .sepet_tanim p{
+        font-size: 7px;
+    }
+    .sepet_adet_ust{
+        font-size: 7px;
+    }
+    .sepet_adet_alt{
+        font-size: 7px;
+    }
+    .sepet_adet_buton{
+        font-size: 8px;
+    }
+    .toplam_fiyat{
+        font-size: 7px;
+    }
+    .sepet_fiyat p{
+        font-size: 7px;
+    }
+    .sepet_adet_input{
+        font-size: 8px;
+        width: 25%;
+    }
+  }
+  
+@media screen and (max-width: 400px) {
+    .social a {
+      font-size: 10px;
+    }
+    .sepet_menu{
+        display: none;
+    }
+    .sepet1{
+        padding: 0;
+    }
+
+  }
+  
+  @media screen and (max-width: 300px) {
+    .social a {
+      font-size: 10px;
+    }
+  }
+  
+  
+
+
+
+
+
+
+
+
+
